@@ -1,0 +1,76 @@
+.container {
+    /*Position*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: #c7cdcb;
+}
+
+.button-container {    
+    /*Flexbox Items*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+}
+
+.button-wrapper {
+    display: block;
+    align-self: center;
+}
+
+button {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f3f3;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: #8bc32a;
+    color: #f4f3f3;
+    border-color: #f4f3f3;
+}
+
+button>h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+}
+
+.subtitle{
+    position: absolute;
+    width: 250px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+footer {
+    /*Text*/
+    font-size: xx-large;
+    font-family: "Hurricane", serif;
+    font-weight: 100;
+    font-style: normal;
+
+    /*Position*/
+    position: fixed;
+    bottom: 5%;
+    right: 2.5%;
+}
