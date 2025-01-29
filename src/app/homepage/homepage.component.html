@@ -4,12 +4,18 @@
         <div class="button-wrapper">
             <button (click)="copyToClipboard('Ñ')">
                 <h1>Ñ</h1>
+                @if(showCopiedTextInCapitalEnye) {
+                    <p style="z-index: 1; position: absolute; bottom: 0; left: 40%;">Copied</p>
+                }
             </button>
             <p class="subtitle">Press and hold Alt then type 165 to write Ñ</p>
         </div>
         <div class="button-wrapper">
             <button (click)="copyToClipboard('ñ')">
                 <h1>ñ</h1>
+                @if(showCopiedTextInSmallEnye) {
+                    <p style="z-index: 1; position: absolute; bottom: 0; left: 40%;">Copied</p>
+                }
             </button>
             <p class="subtitle">Press and hold Alt then type 164 to write ñ</p>
         </div>

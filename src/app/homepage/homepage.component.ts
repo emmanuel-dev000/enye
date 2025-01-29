@@ -8,9 +8,24 @@ import { Component } from '@angular/core';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent {
+  showCopiedTextInCapitalEnye : boolean = false;
+  showCopiedTextInSmallEnye : boolean = false;
   copyToClipboard(text: string) : void {
     navigator.clipboard.writeText(text)
-      .then(() => {alert("Copied to clipboard.")})
+      .then(() => {
+        if (text === 'Ñ') {
+          this.showCopiedTextInCapitalEnye = true;
+        }
+        
+        if (text === 'ñ') {
+          this.showCopiedTextInSmallEnye = true;
+        }
+
+        setTimeout(() => {
+          this.showCopiedTextInCapitalEnye = false;
+          this.showCopiedTextInSmallEnye = false;
+        }, 2000);
+      })
       .catch((err) => {alert(err)});
   }
 }
