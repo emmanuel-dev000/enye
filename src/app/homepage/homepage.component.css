@@ -37,22 +37,59 @@ button {
     height: 250px;
     margin: 0;
     padding: 0;
-    background-color: #f4f3f3;
-    border: 5px solid black;
+    border: 5px solid;
     border-radius: 25px;
     position: relative;
 }
 
 button:hover {
+    cursor: pointer;
+}
+
+.normal {
+    background-color: #f4f3f3;
+    color: black;
+    border-color: black;
+}
+
+.pressed {
     background-color: #8bc32a;
     color: #f4f3f3;
     border-color: #f4f3f3;
+    animation: buttonPressed 2s forwards;
 }
 
 button>h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 72px;
     font-weight: 400;
+}
+
+.copied-text {
+    /*Position*/
+    z-index: 1; 
+    position: absolute; 
+    bottom: 0; 
+    left: 40%;
+    
+    /*Style*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 400;
+    transition: color 2s ease;
+    animation: copiedTextFadeInOut 2s forwards;
+}
+
+@keyframes copiedTextFadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .subtitle{

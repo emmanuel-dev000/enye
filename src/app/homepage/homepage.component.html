@@ -2,19 +2,19 @@
     <h1 class="title">Click to copy-paste.</h1>
     <div class="button-container">
         <div class="button-wrapper">
-            <button (click)="copyToClipboard('Ñ')">
+            <button (click)="capitalEnyePressed('Ñ')" class="button" [ngClass]="capitalEnyeButtonState === 'pressed' ? 'pressed' : 'normal'">
                 <h1>Ñ</h1>
                 @if(showCopiedTextInCapitalEnye) {
-                    <p style="z-index: 1; position: absolute; bottom: 0; left: 40%;">Copied</p>
+                    <p class="copied-text">Copied!</p>
                 }
             </button>
             <p class="subtitle">Press and hold Alt then type 165 to write Ñ</p>
         </div>
         <div class="button-wrapper">
-            <button (click)="copyToClipboard('ñ')">
+            <button (click)="smallEnyePressed('ñ')" class="button" [ngClass]="smallEnyeButtonState === 'pressed' ? 'pressed' : 'normal'">
                 <h1>ñ</h1>
                 @if(showCopiedTextInSmallEnye) {
-                    <p style="z-index: 1; position: absolute; bottom: 0; left: 40%;">Copied</p>
+                    <p class="copied-text">Copied!</p>
                 }
             </button>
             <p class="subtitle">Press and hold Alt then type 164 to write ñ</p>
